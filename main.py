@@ -1,6 +1,6 @@
 import turtle
 from turtle import Turtle, Screen
-
+import random
 turtle.colormode(255)
 
 manny = Turtle()
@@ -30,7 +30,7 @@ manny.shape("circle")
 #     manny.penup()
 #     manny.forward(20)
 
-import random
+
 # def shape(sides):
 #     ang = 360 / sides
 #     for _ in range(sides):
