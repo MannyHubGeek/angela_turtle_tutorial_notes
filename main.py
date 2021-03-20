@@ -1,6 +1,6 @@
 import turtle
 from turtle import Turtle, Screen
-
+import random
 turtle.colormode(255)
 
 manny = Turtle()
@@ -30,7 +30,7 @@ manny.shape("circle")
 #     manny.penup()
 #     manny.forward(20)
 
-import random
+
 # def shape(sides):
 #     ang = 360 / sides
 #     for _ in range(sides):
@@ -78,35 +78,48 @@ import random
 
 
 
-def walk():
-    manny.pensize(10)
-    directions = [0, 90, 180, 270]
-    manny.forward(30)
-    manny.setheading(random.choice(directions))
-    manny.speed(5)
+# def walk():
+#     manny.pensize(10)
+#     directions = [0, 90, 180, 270]
+#     manny.forward(30)
+#     manny.setheading(random.choice(directions))
+#     manny.speed(5)
+#
+# def random_color():
+#     r = random.randint(0, 255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#     random_color = (r,g, b)
+#     return random_color
+#
+#
+# while True:
+#     n = range(255)
+#     manny.color(random_color())
+#     walk()
+
+
+
+
+
+
 
 def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-    random_color = (r,g, b)
-    return random_color
+    color = (r,g, b)
+    return color
+
+def spiro(gap_size):
+    manny.speed("fastest")
+    for _ in range(int(360 / gap_size)):
+        manny.color(random_color())
+        manny.circle(100)
+        manny.setheading(manny.heading() + gap_size)
 
 
-while True:
-    n = range(255)
-    manny.color(random_color())
-    walk()
-
-
-
-
-
-
-
-
-
-
+spiro(15)
 
 
 
